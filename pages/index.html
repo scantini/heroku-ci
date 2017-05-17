@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cloud Application Platform | Heroku</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.herokucdn.com/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Hello Austin! 🌵</h1>
+  <marquee scrollamount="5" direction="up" loop="true">
+    <ol id="messages">
+    </ol>
+  </marquee>
+
+
+  <script type="text/javascript">
+    /*
+    * 1. Add a message to the end of the array. It will be shown on the chalkboard.
+    * 2. Write a passing test for your message in index.test.js
+    * 3. Push your code as a new branch to GitHub repo.
+    * 4. Create a Pull Request from your branch.
+    * 5. If you followed the instructions, it'll get merged and auto-deployed!
+    */
+    var messages = [
+      'Yay Austin! 🌵🌇😎',
+      'Hello, beautiful'
+    ]
+
+
+    // on load, fade in messages and begin scroll
+    window.addEventListener('load', function (event) {
+      for (var i = messages.length - 1; i >= 0; i--) {
+        var msgEl = document.createElement('li')
+        var text  = document.createTextNode(messages[i])
+        msgEl.appendChild(text)
+
+        var list = document.getElementById('messages')
+        list.appendChild(msgEl)
+      }
+    })
+  </script>
+</body>

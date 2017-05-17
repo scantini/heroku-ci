@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'blzee';
+    src: url('/fonts/blzee.eot');
+    src: url('/fonts/blzee.eot') format('embedded-opentype'),
+         url('/fonts/blzee.woff2') format('woff2'),
+         url('/fonts/blzee.woff') format('woff'),
+         url('/fonts/blzee.ttf') format('truetype'),
+         url('/fonts/blzee.svg#blzee') format('svg');
+}
+
+@font-face {
+    font-family: 'chawp';
+    src: url('/fonts/chawp.eot');
+    src: url('/fonts/chawp.eot') format('embedded-opentype'),
+         url('/fonts/chawp.woff2') format('woff2'),
+         url('/fonts/chawp.woff') format('woff'),
+         url('/fonts/chawp.ttf') format('truetype'),
+         url('/fonts/chawp.svg#chawp') format('svg');
+}
+
+@font-face {
+    font-family: 'EraserRegular';
+    src: url('/fonts/EraserRegular.eot');
+    src: url('/fonts/EraserRegular.eot') format('embedded-opentype'),
+         url('/fonts/EraserRegular.woff2') format('woff2'),
+         url('/fonts/EraserRegular.woff') format('woff'),
+         url('/fonts/EraserRegular.ttf') format('truetype'),
+         url('/fonts/EraserRegular.svg#EraserRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'EraserDust';
+    src: url('/fonts/EraserDust.eot');
+    src: url('/fonts/EraserDust.eot') format('embedded-opentype'),
+         url('/fonts/EraserDust.woff2') format('woff2'),
+         url('/fonts/EraserDust.woff') format('woff'),
+         url('/fonts/EraserDust.ttf') format('truetype'),
+         url('/fonts/EraserDust.svg#EraserDust') format('svg');
+}
+
+@font-face {
+    font-family: 'PWChalk';
+    src: url('/fonts/PWChalk.eot');
+    src: url('/fonts/PWChalk.eot') format('embedded-opentype'),
+         url('/fonts/PWChalk.woff2') format('woff2'),
+         url('/fonts/PWChalk.woff') format('woff'),
+         url('/fonts/PWChalk.ttf') format('truetype'),
+         url('/fonts/PWChalk.svg#PWChalk') format('svg');
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url('/img/chalk.jpg');
+  color: #eee;
+  font-family: sans-serif;
+  overflow-y: hidden;
+}
+
+h1 {
+  font-family: EraserRegular, sans-serif;
+  font-size: 64px;
+  text-align: center;
+  /*border: 1px solid #ccc;*/
+  /*background: rgba(255, 255, 255, 0.1);*/
+  text-shadow: 4px 4px 5px #333;
+  padding: 10px;
+}
+
+marquee {
+  /*position: relative;*/
+  height: 100%;
+}
+
+marquee:before, marquee::before,
+marquee:after,  marquee::after {
+  left: 0;
+  z-index: 1;
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  width: 100%; height: 2em;
+  background-image: linear-gradient(180deg, rgb(74, 74, 76), rgba(255,255,255,0));
+}
+
+marquee:after, marquee::after {
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+ol {
+  margin: 0 10%;
+  font-size: 48px;
+  font-family: chawp, sans-serif;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
