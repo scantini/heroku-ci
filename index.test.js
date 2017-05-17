@@ -31,12 +31,12 @@ describe('Node app', function () {
    ********************
    ********************
    */
-  it('responds to / with body including "Hello Austin!"', function (done) {
+  it('responds to / with body including "Hello Everybody!"', function (done) {
     chai.request(server)
       .get('/')
       .end(function (err, res) {
         expect(err).to.be.null
-        expect(res.text).to.include('Hello Austin!')
+        expect(res.text).to.include('Hello Everybody!')
         done()
       })
   })
