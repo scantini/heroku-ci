@@ -60,12 +60,12 @@ describe('Node app', function () {
         done()
       })
   })
-  it('responds to / with body including "Hello, World !"', function (done) {
+  it('responds to / with body including "Hello World !"', function (done) {
     chai.request(server)
       .get('/')
       .end(function (err, res) {
         expect(err).to.be.null
-        expect(res.text).to.include('Hello, World !')
+        expect(res.text).to.include('Hello World !')
         done()
       })
   })
